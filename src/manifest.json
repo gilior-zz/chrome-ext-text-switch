@@ -1,0 +1,20 @@
+  {
+    "name": "Hello Extensions",
+    "description" : "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "./popout/popout.html"
+    },
+      "permissions": [
+              "activeTab","storage"
+            ],
+            "content_scripts": [
+                {
+                  "matches": ["<all_urls>"],
+                  "all_frames": true,
+                  "js": ["/logic_2.js"],
+                  "run_at":"document_idle"
+                }
+                ]
+  }
